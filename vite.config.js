@@ -7,7 +7,7 @@ export default defineConfig({
   server:{
 
     proxy:{
-      "/api":{
+      "/api":{ 
         target:"https://mern-crash-bakend.onrender.com",changeOrigin: true,
         secure: false,
       }
