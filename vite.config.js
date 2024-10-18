@@ -8,7 +8,8 @@ export default defineConfig({
 
     proxy:{
       "/api":{
-        target:"https://mern-crash-baken.onrender.com",
+        target:"https://mern-crash-bakend.onrender.com",changeOrigin: true,
+        secure: false,
       }
     }
   }

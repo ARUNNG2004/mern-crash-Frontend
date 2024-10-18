@@ -38,7 +38,7 @@ export const useProductStore = create((set) => ({
 },
   fetchProducts: async () => {
     try {
-      const res = await fetch("https://mern-crash-baken.onrender.com/api/products/")
+      const res = await fetch("api/products/")
       console.log(" All the products: ", res);
       if (!res.ok) {
         throw new Error("Failed to fetch products");
