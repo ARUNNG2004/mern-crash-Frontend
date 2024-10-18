@@ -11,7 +11,7 @@ export const useProductStore = create((set) => ({
     }
 
     try {
-        const res = await fetch("/api/products/", {
+        const res = await fetch("https://mern-crash-bakend.onrender.com/api/products/", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -38,7 +38,7 @@ export const useProductStore = create((set) => ({
 },
   fetchProducts: async () => {
     try {
-      const res = await fetch("api/products/")
+      const res = await fetch("https://mern-crash-bakend.onrender.com/api/products/")
       console.log(" All the products: ", res);
       if (!res.ok) {
         throw new Error("Failed to fetch products");
@@ -55,7 +55,7 @@ export const useProductStore = create((set) => ({
 
   deleteProduct: async (pid) => {
     try {
-      const res = await fetch(`/api/products/${pid}`, { method: "DELETE" });
+      const res = await fetch(`https://mern-crash-bakend.onrender.com/api/products/${pid}`, { method: "DELETE" });
       if (!res.ok) {
         throw new Error("Failed to delete product");
       }
@@ -78,7 +78,7 @@ export const useProductStore = create((set) => ({
       return { success: false, message: "Please fill in all fields." };
     }
     try {
-      const res = await fetch(`/api/products/${pid}`, {
+      const res = await fetch(`https://mern-crash-bakend.onrender.com/api/products/${pid}`, {
 
         method: "PUT",
         headers: { "Content-Type": "application/json" },
